@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/src/components/SmoothScroll";
+import GradientCursorTrail from "@/src/components/GradientCursorTrail";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
+        <GradientCursorTrail />
         <SmoothScroll />
         {children}
       </body>
