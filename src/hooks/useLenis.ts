@@ -32,7 +32,7 @@ export function useLenis() {
     // Connect ScrollTrigger to Lenis
     ScrollTrigger.scrollerProxy(document.body, {
       scrollTop(value) {
-        if (arguments.length) {
+        if (arguments.length && value !== undefined) {
           lenis.scrollTo(value, { immediate: false });
         }
         return currentScrollTop;

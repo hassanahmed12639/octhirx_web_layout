@@ -151,7 +151,7 @@ export default function FAQSection() {
                   {faq.question}
                 </h3>
                 <div
-                  ref={(el) => (iconRefs.current[index] = el)}
+                  ref={(el) => { iconRefs.current[index] = el; }}
                   className="flex-shrink-0 w-6 h-6 flex items-center justify-center"
                 >
                   <span className="text-2xl font-light text-black">+</span>
@@ -160,7 +160,7 @@ export default function FAQSection() {
 
               {/* Answer */}
               <div
-                ref={(el) => (answerRefs.current[index] = el)}
+                ref={(el) => { answerRefs.current[index] = el; }}
                 className="overflow-hidden"
               >
                 <div className="px-6 pb-6">

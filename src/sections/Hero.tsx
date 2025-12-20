@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, Variants } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -24,7 +24,7 @@ const HEADING_WORDS = [
 ];
 
 // Variants for word-by-word animation
-const wordVariants = {
+const wordVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -37,7 +37,7 @@ const wordVariants = {
     transition: {
       duration: 0.8,
       delay: 0.2 + i * 0.1,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as any,
     },
   }),
 };
@@ -281,7 +281,7 @@ export default function Hero() {
   }, []);
 
   // Button hover animation variants
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     rest: {
       scale: 1,
       y: 0,
@@ -290,7 +290,7 @@ export default function Hero() {
       scale: 1.02,
       y: -4,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 400,
         damping: 25,
       },
@@ -301,56 +301,35 @@ export default function Hero() {
   };
 
   // Decorative blob animation
-  const blobVariants = {
+  const blobVariants: Variants = {
     animate: {
       x: [0, 50, 0],
       y: [0, -30, 0],
       scale: [1, 1.1, 1],
-      transition: {
-        duration: 20,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
     },
   };
 
-  const blob2Variants = {
+  const blob2Variants: Variants = {
     animate: {
       x: [0, -40, 0],
       y: [0, 40, 0],
       scale: [1, 0.9, 1],
-      transition: {
-        duration: 25,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
     },
   };
 
-  const blob3Variants = {
+  const blob3Variants: Variants = {
     animate: {
       x: [0, 30, 0],
       y: [0, -50, 0],
       scale: [1, 1.15, 1],
-      transition: {
-        duration: 30,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
     },
   };
 
   // Floating particles animation
-  const particleVariants = (delay: number) => ({
+  const particleVariants = (delay: number): Variants => ({
     animate: {
       y: [0, -30, 0],
       opacity: [0.3, 0.6, 0.3],
-      transition: {
-        duration: 4 + delay,
-        repeat: Infinity,
-        ease: 'easeInOut',
-        delay: delay,
-      },
     },
   });
 
@@ -369,6 +348,11 @@ export default function Hero() {
               variants={blobVariants}
               initial="animate"
               animate="animate"
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: [0.42, 0, 0.58, 1],
+              }}
               className="absolute top-1/4 -left-20 w-96 h-96 rounded-full opacity-[0.03] blur-3xl"
               style={{
                 background: 'radial-gradient(circle, rgba(116, 192, 252, 0.6), transparent 70%)',
@@ -380,6 +364,11 @@ export default function Hero() {
               variants={blob2Variants}
               initial="animate"
               animate="animate"
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: [0.42, 0, 0.58, 1],
+              }}
               className="absolute top-1/2 -right-32 w-[500px] h-[500px] rounded-full opacity-[0.03] blur-3xl"
               style={{
                 background: 'radial-gradient(circle, rgba(255, 135, 135, 0.6), transparent 70%)',
@@ -391,6 +380,11 @@ export default function Hero() {
               variants={blob3Variants}
               initial="animate"
               animate="animate"
+              transition={{
+                duration: 30,
+                repeat: Infinity,
+                ease: [0.42, 0, 0.58, 1],
+              }}
               className="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full opacity-[0.025] blur-3xl"
               style={{
                 background: 'radial-gradient(circle, rgba(105, 219, 124, 0.5), transparent 70%)',
@@ -413,19 +407,28 @@ export default function Hero() {
         {/* Floating Light Particles */}
         {!reducedMotion && (
           <div ref={particlesRef} className="absolute inset-0">
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                variants={particleVariants(i * 0.5)}
-                initial="animate"
-                animate="animate"
-                className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"
-                style={{
-                  left: `${15 + i * 15}%`,
-                  top: `${20 + (i % 3) * 30}%`,
-                }}
-              />
-            ))}
+            {[...Array(6)].map((_, i) => {
+              const delay = i * 0.5;
+              return (
+                <motion.div
+                  key={i}
+                  variants={particleVariants(delay)}
+                  initial="animate"
+                  animate="animate"
+                  transition={{
+                    duration: 4 + delay,
+                    repeat: Infinity,
+                    ease: [0.42, 0, 0.58, 1],
+                    delay: delay,
+                  }}
+                  className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"
+                  style={{
+                    left: `${15 + i * 15}%`,
+                    top: `${20 + (i % 3) * 30}%`,
+                  }}
+                />
+              );
+            })}
           </div>
         )}
 
