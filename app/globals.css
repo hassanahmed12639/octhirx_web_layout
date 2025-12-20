@@ -19,10 +19,41 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Professional Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
 }
 
 main {
@@ -410,19 +441,21 @@ main {
 
 .showcase-tag {
   display: inline-block;
-  font-size: 11px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   background: rgba(255,255,255,0.12);
   padding: 6px 10px;
   border-radius: 20px;
   margin-bottom: 8px;
   color: #fff;
+  line-height: 1.4;
 }
 
 .showcase-overlay h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.4;
   margin-top: 6px;
   color: #fff;
 }

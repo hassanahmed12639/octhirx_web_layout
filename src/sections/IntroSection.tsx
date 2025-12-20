@@ -80,15 +80,16 @@ export default function IntroSection() {
   });
 
   return (
-    <section className="relative w-full bg-white py-1 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
-      <div className="mx-auto max-w-[1800px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 xl:gap-20 items-start">
+    <section className="relative w-full bg-white py-1">
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Left Column */}
           <div className="flex flex-col">
             {/* Main Heading */}
             <motion.h1 
               ref={headingRef}
-              className="text-[40px] font-normal leading-[51.6px] tracking-[-0.05em] text-black mb-12 lg:mb-14"
+              className="text-[32px] font-normal leading-[1.2] tracking-[-0.02em] text-black mb-12 lg:mb-14"
               variants={containerVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -111,7 +112,7 @@ export default function IntroSection() {
             </button>
             
             {/* Label */}
-            <p className="text-[10px] uppercase tracking-[0.2em] text-black font-semibold">
+            <p className="text-[13px] uppercase tracking-[0.15em] text-black font-semibold">
               DIGITAL DESIGN STUDIO
             </p>
           </div>
@@ -119,7 +120,7 @@ export default function IntroSection() {
           {/* Right Column */}
           <div className="flex flex-col gap-7 lg:gap-8">
             {/* Paragraph */}
-            <p className="text-[15px] sm:text-[16px] leading-[1.75] text-black max-w-[520px]">
+            <p className="text-[15px] sm:text-[16px] leading-[1.6] text-black max-w-[520px]">
               Our team of skilled creative designers collaborates with you to develop customised strategies that showcase your unique value, engage your audience, and drive conversions. We're dedicated to delivering outcomes that go beyond aesthetics.
             </p>
             
@@ -136,6 +137,7 @@ export default function IntroSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export default function FeaturedWork() {
   return (
     <section className="bg-white w-full px-4 py-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-black">
+        <h2 className="text-[28px] md:text-[32px] font-semibold leading-[1.2] tracking-[-0.02em] mb-12 text-black">
           Selected Projects
         </h2>
 

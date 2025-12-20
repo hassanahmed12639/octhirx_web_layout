@@ -31,16 +31,17 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white py-[31px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24" style={{ height: '1236px' }}>
-      <div className="mx-auto max-w-[1800px]">
+    <section className="relative w-full bg-white py-[31px]" style={{ height: '1236px' }}>
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* Heading */}
-        <h2 className="text-left text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-12 lg:mb-16">
+        <h2 className="text-left text-[28px] sm:text-[30px] lg:text-[32px] font-semibold leading-[1.2] tracking-[-0.02em] text-black mb-12 lg:mb-16">
           A Snapshot of Our Recent Case Studies
         </h2>
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 lg:mb-16">
-          <button className="inline-flex items-center justify-center px-5 py-2 bg-black text-white text-xs sm:text-sm font-medium rounded-full hover:bg-gray-800 transition-colors duration-200 self-start sm:self-auto">
+          <button className="inline-flex items-center justify-center px-5 py-2 bg-black text-white text-[13px] sm:text-[14px] font-medium rounded-full hover:bg-gray-800 transition-colors duration-200 self-start sm:self-auto">
             View All
           </button>
         </div>
@@ -66,15 +67,15 @@ export default function CaseStudiesSection() {
 
               {/* Content */}
               <div className="space-y-2">
-                <p className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wide">
+                <p className="text-[13px] sm:text-[14px] font-medium text-gray-600 uppercase tracking-wide">
                   {study.client}
                 </p>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black leading-tight">
+                <h3 className="text-[20px] sm:text-[21px] lg:text-[22px] font-semibold leading-[1.3] text-black">
                   {study.title}
                 </h3>
                 <a
                   href="#"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-black hover:text-gray-700 transition-colors duration-200 mt-3"
+                  className="inline-flex items-center gap-1.5 text-[14px] font-medium text-black hover:text-gray-700 transition-colors duration-200 mt-3"
                 >
                   View case study
                   <svg
@@ -95,6 +96,7 @@ export default function CaseStudiesSection() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

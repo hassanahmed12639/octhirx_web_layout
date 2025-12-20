@@ -374,10 +374,10 @@ export default function ShowcaseGrid() {
       />
       
       <div ref={headerRef} className="showcase-section-header relative z-10 mb-0 max-w-[700px]">
-        <h2 className="mb-3 text-4xl font-bold text-white md:text-[42px]">
+        <h2 className="mb-3 text-[28px] font-semibold leading-[1.2] tracking-[-0.02em] text-white md:text-[32px]">
           Featured Work
         </h2>
-        <p className="text-[#b5b5c3] leading-relaxed">
+        <p className="text-[#b5b5c3] text-[15px] leading-[1.6]">
           A curated selection of branding, product, lifestyle, and campaign visuals.
         </p>
       </div>

@@ -18,7 +18,7 @@ export default function Home() {
       <CapabilitiesSection />
       <CaseStudiesSection />
       <TestimonialsSection />
-      <h2 className="text-center text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-bold leading-[1.1] tracking-[-0.02em] text-black mb-12 lg:mb-16">
+      <h2 className="text-center text-[28px] sm:text-[30px] lg:text-[32px] font-semibold leading-[1.2] tracking-[-0.02em] text-black mb-12 lg:mb-16">
         Frequently Asked Questions
       </h2>
       <FAQSection />

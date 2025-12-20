@@ -484,7 +484,7 @@ export default function Hero() {
           {/* Main headline with word-by-word animation */}
           <motion.h1
             ref={headingRef}
-            className="mb-6 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+            className="mb-6 text-[36px] font-bold leading-[1.1] tracking-[-0.02em] sm:text-[42px] md:text-[56px] lg:text-[72px]"
             style={{
               y: reducedMotion ? undefined : smoothHeadingY,
               opacity: reducedMotion ? 1 : headingOpacity,
@@ -511,7 +511,7 @@ export default function Hero() {
           {/* Sub-headline with fade + upward motion */}
           <motion.p
             ref={subtitleRef}
-            className="hero-subheading mx-auto mb-10 max-w-2xl text-base leading-relaxed sm:text-lg md:mb-12 md:text-xl"
+            className="hero-subheading mx-auto mb-10 max-w-2xl text-[15px] leading-[1.6] sm:text-[16px] md:mb-12"
             initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
             animate={mounted ? { 
               opacity: 1, 
@@ -559,7 +559,7 @@ export default function Hero() {
               whileTap="tap"
             >
               <motion.button 
-                className="hero-button-primary relative h-12 w-full overflow-hidden rounded-lg px-8 text-sm font-medium text-white shadow-lg transition-all duration-300 sm:h-14 sm:px-10 sm:text-base"
+                className="hero-button-primary relative h-12 w-full overflow-hidden rounded-lg px-8 text-[14px] font-medium text-white shadow-lg transition-all duration-300 sm:h-14 sm:px-10"
                 whileHover={{
                   boxShadow: '0 12px 32px rgba(255, 135, 135, 0.35)',
                 }}
@@ -585,7 +585,7 @@ export default function Hero() {
               whileTap="tap"
             >
               <motion.button 
-                className="hero-button-secondary relative h-12 w-full overflow-hidden bg-white px-8 text-sm font-medium text-black transition-all duration-300 sm:h-14 sm:px-10 sm:text-base"
+                className="hero-button-secondary relative h-12 w-full overflow-hidden bg-white px-8 text-[14px] font-medium text-black transition-all duration-300 sm:h-14 sm:px-10"
                 whileHover={{
                   boxShadow: '0 8px 24px rgba(116, 192, 252, 0.3)',
                 }}

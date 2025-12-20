@@ -133,8 +133,9 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative w-full bg-white py-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24" style={{ height: '632px' }}>
-      <div className="mx-auto max-w-[1200px]">
+    <section className="relative w-full bg-white py-0" style={{ height: '632px' }}>
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="mx-auto max-w-[1200px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* FAQ Items */}
         <div className="space-y-4">
           {faqData.map((faq, index) => (
@@ -147,7 +148,7 @@ export default function FAQSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200"
               >
-                <h3 className="text-lg sm:text-xl font-bold text-black pr-4">
+                <h3 className="text-[18px] sm:text-[20px] font-semibold text-black pr-4 leading-[1.3]">
                   {faq.question}
                 </h3>
                 <div
@@ -164,7 +165,7 @@ export default function FAQSection() {
                 className="overflow-hidden"
               >
                 <div className="px-6 pb-6">
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  <p className="text-[15px] text-gray-700 leading-[1.6]">
                     {faq.answer}
                   </p>
                 </div>
@@ -172,6 +173,7 @@ export default function FAQSection() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

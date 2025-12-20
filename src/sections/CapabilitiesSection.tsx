@@ -85,22 +85,23 @@ export default function CapabilitiesSection() {
   };
 
   return (
-    <section className="relative w-full bg-white py-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24" style={{ height: '918px' }}>
-      <div className="mx-auto max-w-[1800px]">
+    <section className="relative w-full bg-white py-20" style={{ height: '918px' }}>
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Left Column */}
           <div className="flex flex-col">
             {/* Main Title */}
-            <h2 className="text-[48px] lg:text-[56px] xl:text-[64px] font-bold leading-[1.1] tracking-[-0.05em] text-black mb-6">
+            <h2 className="text-[28px] lg:text-[30px] xl:text-[32px] font-semibold leading-[1.2] tracking-[-0.02em] text-black mb-6">
               <span className="block">Explore</span>
-              <span className="block text-[32px] lg:text-[38px] xl:text-[42px] font-normal italic">
+              <span className="block text-[22px] lg:text-[24px] xl:text-[26px] font-normal italic">
                 Our Design
               </span>
               <span className="block">Capabilities</span>
             </h2>
             
             {/* Subtitle */}
-            <p className="text-[15px] sm:text-[16px] leading-[1.6] text-gray-500 mb-12 lg:mb-16 max-w-[600px]">
+            <p className="text-[15px] sm:text-[16px] leading-[1.6] text-gray-600 mb-12 lg:mb-16 max-w-[600px]">
               Expanding the Limits of Possibility with Tailored Solutions
             </p>
             
@@ -117,15 +118,15 @@ export default function CapabilitiesSection() {
                     >
                       <div className="flex-1">
                         <div className="flex items-start gap-3 mb-1">
-                          <span className="text-[17px] lg:text-[19px] font-bold text-black leading-tight">
+                          <span className="text-[18px] lg:text-[20px] font-semibold text-black leading-[1.3]">
                             {capability.number}.
                           </span>
-                          <h3 className="text-[17px] lg:text-[19px] font-bold text-black leading-tight">
+                          <h3 className="text-[18px] lg:text-[20px] font-semibold text-black leading-[1.3]">
                             {capability.title}
                           </h3>
                         </div>
                         {capability.description && (
-                          <p className="text-[14px] lg:text-[15px] leading-[1.6] text-gray-500 ml-8 mt-2 max-w-[500px]">
+                          <p className="text-[14px] lg:text-[15px] leading-[1.6] text-gray-600 ml-8 mt-2 max-w-[500px]">
                             {capability.description}
                           </p>
                         )}
@@ -156,7 +157,7 @@ export default function CapabilitiesSection() {
                       style={{ height: 0, opacity: 0 }}
                     >
                       <div className="pb-5 lg:pb-6 pl-8">
-                        <p className="text-[14px] lg:text-[15px] leading-[1.6] text-gray-500 max-w-[500px]">
+                        <p className="text-[14px] lg:text-[15px] leading-[1.6] text-gray-600 max-w-[500px]">
                           {capability.content}
                         </p>
                       </div>
@@ -178,6 +179,7 @@ export default function CapabilitiesSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -4,23 +4,24 @@ import Image from 'next/image';
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full bg-gray-100 py-[31px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
-      <div className="mx-auto max-w-[1800px]">
+    <section className="relative w-full bg-gray-100 py-[31px]">
+      <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         {/* Header with Clutch Reviews Button */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-12 lg:mb-16">
           {/* Header Text */}
           <div className="mb-6 sm:mb-0">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
-              <span className="font-normal italic text-gray-500">From Startups</span>{' '}
-              <span className="font-normal italic text-gray-500">to Fortune 900+</span>
+            <h2 className="text-[28px] sm:text-[30px] md:text-[31px] lg:text-[32px] font-semibold text-black leading-[1.2] tracking-[-0.02em]">
+              <span className="font-normal italic text-gray-600">From Startups</span>{' '}
+              <span className="font-normal italic text-gray-600">to Fortune 900+</span>
             </h2>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
+            <h2 className="text-[28px] sm:text-[30px] md:text-[31px] lg:text-[32px] font-semibold text-black leading-[1.2] tracking-[-0.02em]">
               Companies
             </h2>
           </div>
 
           {/* Clutch Reviews Button */}
-          <button className="inline-flex items-center justify-center px-5 py-2 bg-black text-white text-xs sm:text-sm font-medium rounded-full hover:bg-gray-800 transition-colors duration-200 self-start sm:self-auto">
+          <button className="inline-flex items-center justify-center px-5 py-2 bg-black text-white text-[13px] sm:text-[14px] font-medium rounded-full hover:bg-gray-800 transition-colors duration-200 self-start sm:self-auto">
             Clutch Reviews
           </button>
         </div>
@@ -62,18 +63,18 @@ export default function TestimonialsSection() {
                   <div className="text-6xl md:text-7xl lg:text-8xl font-serif text-black leading-none mb-4 -mt-2" style={{ fontFamily: 'Georgia, serif' }}>
                     &ldquo;
                   </div>
-                  <p className="text-lg md:text-xl lg:text-2xl font-medium text-black leading-relaxed mb-6">
+                  <p className="text-[17px] md:text-[18px] font-medium text-black leading-[1.5] mb-6">
                     Zyntrex Agency's design work output is superb, they could transform our input into dev-ready designs.
                   </p>
                   <div className="mb-6">
-                    <p className="text-base md:text-lg font-bold text-black mb-1">
+                    <p className="text-[16px] md:text-[17px] font-semibold text-black mb-1">
                       Patrick Goodman
                     </p>
-                    <p className="text-sm md:text-base text-gray-600">
+                    <p className="text-[14px] md:text-[15px] text-gray-600">
                       CTO, Workrede
                     </p>
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-black">
+                  <div className="text-[20px] md:text-[22px] font-semibold text-black">
                     Kwik.
                   </div>
                 </div>
@@ -99,23 +100,23 @@ export default function TestimonialsSection() {
 
             {/* Additional Information Block - Below profile photos */}
             <div className="rounded-2xl p-6 md:p-8 shadow-sm" style={{ boxSizing: 'content-box' }}>
-              <p className="text-2xl md:text-3xl font-bold text-black mb-2">
+              <p className="text-[20px] md:text-[22px] font-semibold text-black mb-2">
                 Top 1%
               </p>
-              <p className="text-base md:text-lg text-gray-700 mb-1">
+              <p className="text-[16px] md:text-[17px] text-gray-700 mb-1">
                 Telehealth & Wellness Creators
               </p>
-              <p className="text-sm md:text-base text-gray-600">
+              <p className="text-[14px] md:text-[15px] text-gray-600">
                 5.0 Rated On Clutch
               </p>
             </div>
 
             {/* Second Testimonial/Achievement */}
             <div className="relative p-6 md:p-8">
-              <p className="text-base md:text-lg lg:text-xl text-black leading-relaxed mb-4">
+              <p className="text-[16px] md:text-[17px] leading-[1.5] text-black mb-4">
                 Tangible secured $3 million to streamline business scaling for the construction industry worldwide.
               </p>
-              <div className="text-2xl md:text-3xl font-bold text-black mb-4">
+              <div className="text-[20px] md:text-[22px] font-semibold text-black mb-4">
                 Tangible
               </div>
               <button className="absolute top-1/2 right-4 md:right-6 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200">
@@ -140,17 +141,17 @@ export default function TestimonialsSection() {
           <div className="lg:col-span-1 space-y-6">
             {/* Top Achievement Card */}
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm relative">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-2">
+              <p className="text-[28px] md:text-[30px] lg:text-[32px] font-semibold text-black mb-2">
                 $5 Millions
               </p>
-              <p className="text-sm md:text-base text-gray-600 mb-6">
+              <p className="text-[14px] md:text-[15px] text-gray-600 mb-6">
                 Fund Raised by Client
               </p>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                  <span className="text-xs font-bold text-black">☕</span>
+                  <span className="text-[13px] font-semibold text-black">☕</span>
                 </div>
-                <span className="text-lg md:text-xl font-semibold text-black">taskade</span>
+                <span className="text-[17px] md:text-[18px] font-semibold text-black">taskade</span>
               </div>
               <button className="absolute top-1/2 right-4 md:right-6 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200">
                 <svg
@@ -171,13 +172,13 @@ export default function TestimonialsSection() {
 
             {/* Bottom Achievement Card */}
             <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm relative">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-2">
+              <p className="text-[28px] md:text-[30px] lg:text-[32px] font-semibold text-black mb-2">
                 34% Growth
               </p>
-              <p className="text-sm md:text-base text-gray-600 mb-6">
+              <p className="text-[14px] md:text-[15px] text-gray-600 mb-6">
                 In User Base Post Design
               </p>
-              <div className="text-lg md:text-xl font-semibold text-black">
+              <div className="text-[17px] md:text-[18px] font-semibold text-black">
                 amazon
               </div>
               <button className="absolute top-1/2 right-4 md:right-6 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200">
@@ -198,6 +199,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
