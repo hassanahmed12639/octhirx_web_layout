@@ -1,73 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants, easeOut } from "framer-motion";
 import Image from "next/image";
 
 const AnimatedIllustration = () => {
   // Floating particles animation
-  const particleVariants = {
+  const particleVariants: Variants = {
     animate: (custom: number) => ({
       y: [0, -30, -60],
       x: [0, custom * 10, custom * 5],
       opacity: [0, 1, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        delay: custom * 0.4,
-        ease: "easeInOut",
-      },
     }),
   };
 
   // Sparkle animation
-  const sparkleVariants = {
+  const sparkleVariants: Variants = {
     animate: {
       scale: [0, 1, 0],
       rotate: [0, 180, 360],
       opacity: [0, 1, 0],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
     },
   };
 
   // Glow pulse animation
-  const glowVariants = {
+  const glowVariants: Variants = {
     animate: {
       scale: [1, 1.3, 1],
       opacity: [0.3, 0.6, 0.3],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
     },
   };
 
   // Main container animation
-  const containerVariants = {
+  const containerVariants: Variants = {
     initial: { opacity: 0, y: 30 },
     animate: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: easeOut,
       },
     },
   };
 
   // Floating effect for the entire image
-  const floatingVariants = {
+  const floatingVariants: Variants = {
     animate: {
       y: [0, -10, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
     },
   };
 
@@ -79,12 +58,14 @@ const AnimatedIllustration = () => {
       animate="animate"
       whileInView="animate"
       viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {/* Main illustration with floating effect */}
       <motion.div
         className="relative z-10"
         variants={floatingVariants}
         animate="animate"
+        transition={{ duration: 4, repeat: Infinity, ease: [0.42, 0, 0.58, 1] }}
       >
         <Image
           src="/images/team-illustration.png"
@@ -104,6 +85,11 @@ const AnimatedIllustration = () => {
           style={{ left: "30%", top: "55%" }}
           variants={glowVariants}
           animate="animate"
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: [0.42, 0, 0.58, 1],
+          }}
         />
 
         {/* Right person hand glow - positioned at right person's hand */}
@@ -112,7 +98,12 @@ const AnimatedIllustration = () => {
           style={{ left: "65%", top: "60%" }}
           variants={glowVariants}
           animate="animate"
-          transition={{ delay: 0.5 }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            delay: 0.5,
+            ease: [0.42, 0, 0.58, 1],
+          }}
         />
 
         {/* Blocks center glow */}
@@ -121,7 +112,12 @@ const AnimatedIllustration = () => {
           style={{ left: "48%", top: "65%" }}
           variants={glowVariants}
           animate="animate"
-          transition={{ delay: 1 }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            delay: 1,
+            ease: [0.42, 0, 0.58, 1],
+          }}
         />
 
         {/* Floating particles around left person */}
@@ -133,6 +129,12 @@ const AnimatedIllustration = () => {
             variants={particleVariants}
             animate="animate"
             custom={i}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: i * 0.4,
+              ease: [0.42, 0, 0.58, 1],
+            }}
           />
         ))}
 
@@ -145,6 +147,12 @@ const AnimatedIllustration = () => {
             variants={particleVariants}
             animate="animate"
             custom={i + 2}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: (i + 2) * 0.4,
+              ease: [0.42, 0, 0.58, 1],
+            }}
           />
         ))}
 
@@ -159,7 +167,12 @@ const AnimatedIllustration = () => {
             }}
             variants={sparkleVariants}
             animate="animate"
-            transition={{ delay: i * 0.6 }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              delay: i * 0.6,
+              ease: [0.42, 0, 0.58, 1],
+            }}
           >
             <svg
               width="20"
@@ -183,7 +196,7 @@ const AnimatedIllustration = () => {
           animate={{
             y: [0, -20, 0],
             rotate: [0, 90, 0],
-            transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+            transition: { duration: 4, repeat: Infinity, ease: [0.42, 0, 0.58, 1] },
           }}
         />
 
@@ -196,7 +209,7 @@ const AnimatedIllustration = () => {
             transition: {
               duration: 3.5,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: [0.42, 0, 0.58, 1],
               delay: 0.5,
             },
           }}
@@ -211,7 +224,7 @@ const AnimatedIllustration = () => {
             transition: {
               duration: 4.5,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: [0.42, 0, 0.58, 1],
               delay: 1,
             },
           }}
