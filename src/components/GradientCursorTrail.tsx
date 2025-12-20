@@ -18,7 +18,7 @@ const PARTICLE_LIFETIME = 30;
 
 export default function GradientCursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const smoothRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
