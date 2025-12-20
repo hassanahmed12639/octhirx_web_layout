@@ -184,6 +184,58 @@ main {
   box-shadow: 0 8px 24px rgba(255, 135, 135, 0.3);
 }
 
+/* Enhanced Hero Button Interactions */
+.hero-button-primary-wrapper,
+.hero-button-wrapper {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Animated lines for hero section */
+.animated-line {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animated-line-horizontal {
+  transform-origin: left center;
+}
+
+.animated-line-vertical {
+  transform-origin: center top;
+}
+
+/* Reduced motion support for hero animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient-text,
+  .hero-subheading,
+  .hero-button-wrapper,
+  .hero-button-primary-wrapper {
+    animation: none !important;
+    will-change: auto !important;
+  }
+  
+  .hero-gradient-text {
+    animation: gradientText 10s ease infinite !important;
+  }
+  
+  .hero-subheading {
+    animation: gradientText 12s ease infinite !important;
+  }
+  
+  .hero-button-wrapper,
+  .hero-button-primary-wrapper {
+    animation: gradientBorder 5s ease infinite !important;
+  }
+
+  .animated-line {
+    display: none !important;
+  }
+}
+
 /* Footer Button Styles */
 .footer-button-wrapper {
   position: relative;
@@ -451,4 +503,36 @@ canvas[class*="fixed"] {
   left: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
+}
+
+/* Featured Work - Selected Projects Image Grid Styles */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-radius: 12px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.1);
+}
+
+.image-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-card:hover::after {
+  opacity: 1;
 }

@@ -133,13 +133,8 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative w-full bg-white py-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+    <section className="relative w-full bg-white py-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24" style={{ height: '632px' }}>
       <div className="mx-auto max-w-[1200px]">
-        {/* Header */}
-        <h2 className="text-center text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-bold leading-[1.1] tracking-[-0.02em] text-black mb-12 lg:mb-16">
-          Frequently Asked Questions
-        </h2>
-
         {/* FAQ Items */}
         <div className="space-y-4">
           {faqData.map((faq, index) => (

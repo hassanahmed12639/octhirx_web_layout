@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 // Animation variants for text reveal
 const containerVariants = {
@@ -117,33 +118,19 @@ export default function IntroSection() {
 
           {/* Right Column */}
           <div className="flex flex-col gap-7 lg:gap-8">
-            {/* First Paragraph */}
+            {/* Paragraph */}
             <p className="text-[15px] sm:text-[16px] leading-[1.75] text-black max-w-[520px]">
-              Our team of skilled creative designers collaborates with you to develop customised strategies that showcase your unique value, engage your audience, and drive conversions.
-            </p>
-            
-            {/* Second Paragraph */}
-            <p className="text-[15px] sm:text-[16px] leading-[1.75] text-black max-w-[520px]">
-              We're dedicated to delivering outcomes that go beyond aesthetics.
+              Our team of skilled creative designers collaborates with you to develop customised strategies that showcase your unique value, engage your audience, and drive conversions. We're dedicated to delivering outcomes that go beyond aesthetics.
             </p>
             
             {/* Image Container - positioned to the right of text */}
-            <div className="relative w-full aspect-square max-w-[440px] ml-auto mt-4">
+            <div className="relative w-full aspect-square max-w-[240px] ml-auto mt-4">
               <div className="relative w-full h-full rounded-[10px] overflow-hidden">
-                {/* Glossy abstract image effect - matching the dark glossy spherical object */}
-                <div 
-                  className="w-full h-full"
-                  style={{
-                    background: `
-                      radial-gradient(ellipse 55% 45% at 32% 28%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 25%, transparent 60%),
-                      radial-gradient(ellipse 50% 40% at 68% 72%, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0.2) 30%, transparent 65%),
-                      radial-gradient(ellipse 40% 35% at 50% 50%, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 40%, transparent 70%),
-                      radial-gradient(ellipse 25% 25% at 18% 58%, rgba(168, 85, 247, 0.25) 0%, transparent 55%),
-                      linear-gradient(135deg, #050505 0%, #0a0a0a 20%, #0f0f0f 40%, #0a0a0a 60%, #050505 80%, #000000 100%)
-                    `,
-                    filter: 'contrast(1.2) brightness(0.8)',
-                    boxShadow: 'inset 0 0 120px rgba(255, 255, 255, 0.08), 0 4px 20px rgba(0, 0, 0, 0.3)',
-                  }}
+                <Image
+                  src="/images/fusion.png"
+                  alt="Fusion"
+                  fill
+                  className="object-cover rounded-[10px]"
                 />
               </div>
             </div>
